@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature_check_in.CheckInFragment">
+
+    <ImageView
+        android:id="@+id/iv_sign_out"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_margin="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/log_out"
+        android:padding="4dp"
+        android:src="@drawable/logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_check_in"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/check_in"
+        android:src="@drawable/checkin"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_last_check_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_check_in"
+        app:layout_constraintStart_toStartOf="@+id/iv_check_in"
+        app:layout_constraintTop_toBottomOf="@+id/iv_check_in"
+        tools:text="last check in time : " />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_check_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="tv_last_check_out,iv_check_in" />
+
+    <ImageView
+        android:id="@+id/iv_check_out"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/check_out"
+        android:src="@drawable/checkout"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_last_check_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_check_out"
+        app:layout_constraintStart_toStartOf="@+id/iv_check_out"
+        app:layout_constraintTop_toBottomOf="@+id/iv_check_out"
+        tools:text="last check in time : " />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_check_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="tv_last_check_in,iv_check_out" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph.xml"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.alaa.checkindemo.feature_auth.presentation.SplashFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/main_nav_graph.xml" />
+        <action
+            android:id="@+id/action_splashFragment_to_adminDashboardFragment"
+            app:destination="@id/adminDashboardFragment"
+            app:popUpTo="@id/main_nav_graph.xml" />
+        <action
+            android:id="@+id/action_splashScreenFragment_to_checkInFragment"
+            app:destination="@id/checkInFragment"
+            app:popUpTo="@id/main_nav_graph.xml" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.alaa.checkindemo.feature_auth.presentation.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_adminDashboardFragment"
+            app:destination="@id/adminDashboardFragment"
+            app:popUpTo="@id/main_nav_graph.xml" />
+        <action
+            android:id="@+id/action_loginFragment_to_checkInFragment"
+            app:destination="@id/checkInFragment"
+            app:popUpTo="@id/main_nav_graph.xml" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminDashboardFragment"
+        android:name="com.alaa.checkindemo.feature_admin.presentation.AdminDashboardFragment"
+        android:label="fragment_admin_dashboard"
+        tools:layout="@layout/fragment_admin_dashboard">
+        <action
+            android:id="@+id/action_adminDashboardFragment_to_checkInDetailsFragment"
+            app:destination="@id/checkInDetailsFragment" />
+        <action
+            android:id="@+id/action_adminDashboardFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/main_nav_graph.xml"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkInFragment"
+        android:name="com.alaa.checkindemo.feature_check_in.CheckInFragment"
+        android:label="fragment_check_in"
+        tools:layout="@layout/fragment_check_in">
+        <action
+            android:id="@+id/action_checkInFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/main_nav_graph.xml"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkInDetailsFragment"
+        android:name="com.alaa.checkindemo.feature_admin.presentation.check_in_details.CheckInDetailsFragment"
+        android:label="fragment_check_in_details"
+        tools:layout="@layout/fragment_check_in_details">
+        <argument
+            android:name="userId"
+            app:argType="string" />
+    </fragment>
+</navigation>

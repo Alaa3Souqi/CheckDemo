@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "831610773836",
+    "project_id": "check-in-29716",
+    "storage_bucket": "check-in-29716.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:831610773836:android:dd23ba23c4eb7797452fe9",
+        "android_client_info": {
+          "package_name": "com.alaa.checkindemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "831610773836-1m921vmu2vm3hv7h1cjn7k4e4m43j4ca.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBonF6z_-lVPUWO0190Ulgp2QKbgcwEbCA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "831610773836-1m921vmu2vm3hv7h1cjn7k4e4m43j4ca.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
