@@ -29,6 +29,7 @@ class CheckInViewModel @Inject constructor(
 
 
 
+
     private val _checkInStatus = MutableLiveData<ScreenState<Unit>>()
     val checkInStatus: LiveData<ScreenState<Unit>> = _checkInStatus
 
